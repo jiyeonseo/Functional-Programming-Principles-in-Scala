@@ -111,4 +111,27 @@ class FunSetSuite extends FunSuite {
   }
 
 
+  test("filter") {
+    new TestSets {
+
+      val s = union(s1, s2) // Set(1,2)
+      val filterr : Int => Boolean = { elem => if(elem == 1) true else false}
+
+      val result = filter(s, filterr)
+//      val result2 = filter2(s, filterr)
+
+      assert(contains(result, 1), "TRUE")
+//      assert(contains(result2, 1), "TRUE")
+//      println(result0(1))
+//      println(result(1))
+
+//      assert(contains(s, 1), "Union 1")
+//      assert(contains(s, 2), "Union 2")
+//      assert(!contains(s, 3), "Union 3")
+    }
+  }
+
+
+
+
 }
